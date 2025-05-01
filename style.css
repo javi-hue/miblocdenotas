@@ -1,0 +1,12 @@
+.decoracion {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 80px;
+  height: 80px;
+  background-image: url('blob:https://web.whatsapp.com/afe55a39-9909-4c13-851e-dfb339094e20');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1000;
+  pointer-events: none;
+}
