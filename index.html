@@ -1,204 +1,59 @@
-<html>
-  <head>
-    <meta content="text/html; charset=utf-8" http-equiv="content-type">
-    <title>Codex Notarum</title>    
-    <meta name="keywords" content="bloc de notas online, bloc de notas, bloc de notas en internet" />
-    <meta name="description" content="Aplicación de bloc de notas rápidas online, escribir notas gratis y descargar en el iphone y android.">
-    <meta name="author" content="Iósif Vissariónovich Dzhugashvili">
-    <meta name="apple-mobile-web-app-title" content="bloc de notas">
-  <title>Imagen en Marquee</title>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Codex Notarum - Block de Notas</title>
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
   <style>
-    .marquee-derecha {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      width: 200px;
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'UnifrakturCook', cursive;
+      background: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+      background-color: #fbeec1;
+      color: #3e2c1c;
     }
 
-    .marquee-derecha img {
-      width: 100%; /* ajusta el tamaño de la imagen dentro del marquee */
+    .logo {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 160px;
+      border: 3px solid #3e2c1c;
+      border-radius: 10px;
+      background-color: #f0e5b8;
+      padding: 5px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-top: 60px;
+      text-align: center;
+      text-shadow: 1px 1px 2px #00000066;
+    }
+
+    textarea {
+      width: 100%;
+      height: 400px;
+      margin-top: 30px;
+      padding: 20px;
+      font-family: 'UnifrakturCook', cursive;
+      font-size: 22px;
+      background-color: #fff8dc;
+      border: 3px solid #3e2c1c;
+      border-radius: 15px;
+      resize: none;
+      box-shadow: 4px 4px 8px #00000033;
     }
   </style>
 </head>
 <body>
-  <div class="marquee-derecha">
-    <marquee behavior="scroll" direction="left" scrollamount="5">
-      <img src="WhatsApp Image 2025-05-01 at 14.42.33.jpeg" alt="Codex Notarum">
-    </marquee>
-  </div>
 
-  <h1>Bienvenido a Codex Notarum</h1>
-  <p>Contenido de la página...</p>
+  <img src="WhatsApp Image 2025-05-01 at 14.42.33.jpeg" alt="Codex Notarum" class="logo">
 
-    
-    <!-- APP android -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <link rel="shortcut icon" sizes="196x196" href="img/icon196.png">
-    <!-- APP iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="translucent-black">
-    <meta name="apple-mobile-web-app-title" content="bloc de notas">
-    <link rel="apple-touch-icon" href="img/icon512.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/icon76.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/icon120.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/icon152.png">
-    <!-- windows tile -->
-    <meta name="msapplication-TileColor" content="#212529">
-    <meta name="msapplication-TileImage" content="icon144.png">
-    <meta name="theme-color" content="#FF0000">
-    <!-- no zoom mobile -->
-    <meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <h1>Codex Notarum</h1>
 
-    <!-- Importación de fuente medieval desde Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+  <textarea placeholder="Escribe tus notas medievales aquí..."></textarea>
 
-    <style>
-      /* Estilo general medieval */
-      body {
-        margin: 0;
-        padding: 0;
-        background-image: url('img/parchment.jpg'); /* Asegúrate de tener esta imagen con textura de pergamino */
-        background-color: #f7f1e1; /* Color pergamino */
-        background-size: cover;
-        font-family: 'MedievalSharp', cursive;
-        box-sizing: border-box;
-      }
-      
-      /* Titulares y marquees con tipografía e impacto medieval */
-      marquee {
-        color: #8b0000; /* Rojo oscuro */
-        font-size: 24px;
-        margin: 25px 0 30px;
-        font-weight: bold;
-        text-shadow: 1px 1px 2px #fff;
-        cursor: default;
-      }
-      marquee.satified-users {
-        color: #5a2a27; /* Tono rojizo profundo */
-        font-size: 20px;
-        margin: 10px 0;
-        font-weight: bold;
-        text-shadow: 1px 1px 1px #fff;
-        cursor: default;
-      }
-      
-      /* Área de texto con fondo estilo pergamino y bordes clásicos */
-      textarea {
-        width: 80%;
-        height: calc(100vh - 278px);
-        padding: 10px;
-        border: 2px solid #8b4513; /* Sienna oscuro */
-        border-radius: 4px;
-        resize: none;
-        display: block;
-        background-color: #faf0e6; /* Color similar a lino */
-        font-family: 'MedievalSharp', cursive;
-        font-size: 18px;
-      }
-      textarea:focus {
-        outline: none;
-        border: 2px solid #b22222; /* Firebrick */
-      }
-      
-      ::-moz-selection { background: yellow; }
-      ::selection { background: yellow; }
-      
-      /* Botones con apariencia clásica */
-      button {
-        display: inline-block;
-        margin: 10px 3px 0px;
-        padding: 5px 20px;
-        background: #d2b48c; /* Color tan */
-        border: 2px solid #8b4513;
-        border-radius: 3px;
-        font-family: 'MedievalSharp', cursive;
-        font-size: 16px;
-        color: #4b3621; /* Marrón oscuro */
-        cursor: pointer;
-      }
-      button:hover {
-        background: #f5deb3; /* Versión más clara del tan */
-      }
-      button.active {
-        filter: invert(75%);
-      }
-      
-      /* Toolbar y campos de formulario */
-      .toolbar {
-        margin-bottom: 16px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-      }
-      .field {
-        margin: 0 1rem 0.5rem 0;
-        height: 2rem;
-        font-family: 'MedievalSharp', cursive;
-        font-size: 16px;
-        background: #fffaf0;
-        border: 2px solid #8b4513;
-      }
-      
-      /* Pie de página con sello de la época */
-      footer {
-        display: block;
-        color: #5a4d41;
-        font-size: 14px;
-        margin-top: 20px;
-        font-family: 'MedievalSharp', cursive;
-        text-shadow: 1px 1px 2px #fff;
-        cursor: default;
-      }
-    </style>
-  </head>
-
-  <body>
-    <marquee>&iexcl;&iexcl;&iexcl;C O D E X  N O T A R U M!</marquee>
-    <center>
-      <div class="toolbar">
-        <button class="field" id="bold">Negrita</button>
-        <button class="field" id="italic">Cursiva</button>
-        <select class="field" name="font-family" autocomplete="off">
-          <option selected value="Arial">Arial</option>
-          <option value="'Comic Sans MS', 'Comic Sans'">Comic Sans</option>
-          <option value="Verdana">Verdana</option>
-          <option value="Courier">Courier</option>
-        </select>
-        <select class="field" name="font-size" autocomplete="off">
-          <option selected value="16">16</option>
-          <option value="20">20</option>
-          <option value="24">24</option>
-          <option value="28">28</option>
-          <option value="32">32</option>
-          <option value="36">36</option>
-        </select>
-        <input class="field" type="color" name="color" autocomplete="off">
-      </div>
-      <textarea class="content-input" id="content" placeholder="Ponte a trabajar con la diligencia de un escriba medieval"></textarea>
-      <button id="copy">Copiar</button>
-      <button id="eraseText" type="button" value="Clear">Borrar</button>
-      <button id="download" type="button">Descargar</button>
-      <marquee class="satified-users">
-        Clientes satisfechos:
-        fuegogelido_bot: Estoy usando este códex para mis apuntes. ¡Mi pluma revive!
-        | soma01a: El reflejo que necesitaba mi alma.
-        | srdogma: No imaginé que un códex pudiera transformar mi escritura.
-        | vasito_de_agua__: Con este códex, mis letras son eternas.
-        | tovarish_tarkus: Por fin, un lugar digno para escribir mi testamento.
-        | xirrio: Ya no necesito agotar mis pergaminos.
-        | KatoDM27: Al fin puedo plasmar mis pensamientos sin temor al olvido.
-        | Fulman_: Anonimato garantizado. Ideal para mis misivas.
-      </marquee>
-      <footer>developed by Iósif Vissariónovich · hosting courtesy by gueben</footer>
-    </center>
-
-    <script type="module" src="src/index.js"></script>
-    <script src="src/buttons.js"></script>
-    <script src="src/toolbar.js"></script>
-  </body>
+</body>
 </html>
-
