@@ -6,29 +6,29 @@
     <meta name="description" content="Aplicación de bloc de notas rápidas online, escribir notas gratis y descargar en el iphone y android.">
     <meta name="author" content="Iósif Vissariónovich Dzhugashvili">
     <meta name="apple-mobile-web-app-title" content="bloc de notas">
-  
-  <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Página con Imagen</title>
+  <title>Imagen en Marquee</title>
   <style>
-    .logo-superior-derecho {
+    .marquee-derecha {
       position: absolute;
       top: 10px;
       right: 10px;
-      width: 150px; /* Ajusta el tamaño según necesites */
+      width: 200px;
+    }
+
+    .marquee-derecha img {
+      width: 100%; /* ajusta el tamaño de la imagen dentro del marquee */
     }
   </style>
 </head>
 <body>
-  <img src="WhatsApp Image 2025-05-01 at 14.42.33.jpeg" alt="Codex Notarum" class="logo-superior-derecho">
-  
-  <!-- Contenido de tu página -->
+  <div class="marquee-derecha">
+    <marquee behavior="scroll" direction="left" scrollamount="5">
+      <img src="WhatsApp Image 2025-05-01 at 14.42.33.jpeg" alt="Codex Notarum">
+    </marquee>
+  </div>
+
   <h1>Bienvenido a Codex Notarum</h1>
-  <p>Contenido aquí...</p>
-</body>
-</html>
+  <p>Contenido de la página...</p>
 
     
     <!-- APP android -->
