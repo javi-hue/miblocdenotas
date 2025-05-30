@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Codex Notarum - Block de Notas</title>
-  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=MedievalSharp&family=Cinzel+Decorative&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 20px;
-      font-family: 'UnifrakturCook', cursive;
       background: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
       background-color: #fbeec1;
       color: #3e2c1c;
+      font-family: 'UnifrakturCook', cursive;
     }
 
     .logo {
@@ -27,34 +27,95 @@
 
     h1 {
       font-size: 48px;
-      margin-top: 60px;
       text-align: center;
+      margin-top: 60px;
       text-shadow: 1px 1px 2px #00000066;
+    }
+
+    .controls {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    .controls select,
+    .controls input[type="color"],
+    .controls input[type="number"],
+    .controls button {
+      margin: 5px;
+      padding: 8px;
+      font-size: 16px;
+      border-radius: 8px;
     }
 
     textarea {
       width: 100%;
       height: 400px;
-      margin-top: 30px;
       padding: 20px;
-      font-family: 'UnifrakturCook', cursive;
-      font-size: 22px;
-      background-color: #fff8dc;
+      font-size: 20px;
+      resize: none;
       border: 3px solid #3e2c1c;
       border-radius: 15px;
-      resize: none;
+      background-color: #fff8dc;
       box-shadow: 4px 4px 8px #00000033;
     }
   </style>
 </head>
 <body>
 
-  <img src="codex-notarum.jpeg" alt="Codex Notarum" class="logo">
-
+  <!-- Imagen con nombre codificado -->
+  <img src="WhatsApp%20Image%202025-05-01%20at%2014.42.33.jpeg" alt="Codex Notarum" class="logo">
 
   <h1>Codex Notarum</h1>
 
-  <textarea placeholder="Escribe tus notas medievales aquí..."></textarea>
+  <div class="controls">
+    <label>Fuente:
+      <select id="fontSelector">
+        <option value="'UnifrakturCook', cursive">Unifraktur</option>
+        <option value="'MedievalSharp', cursive">MedievalSharp</option>
+        <option value="'Cinzel Decorative', serif">Cinzel</option>
+      </select>
+    </label>
+
+    <label>Tamaño:
+      <input type="number" id="fontSize" value="20" min="10" max="40"> px
+    </label>
+
+    <label>Color:
+      <input type="color" id="fontColor" value="#3e2c1c">
+    </label>
+
+    <button onclick="downloadNote()">📜 Descargar Notas</button>
+  </div>
+
+  <textarea id="noteArea" placeholder="Escribe tus notas medievales aquí..."></textarea>
+
+  <script>
+    const noteArea = document.getElementById('noteArea');
+    const fontSelector = document.getElementById('fontSelector');
+    const fontSize = document.getElementById('fontSize');
+    const fontColor = document.getElementById('fontColor');
+
+    fontSelector.addEventListener('change', () => {
+      noteArea.style.fontFamily = fontSelector.value;
+    });
+
+    fontSize.addEventListener('input', () => {
+      noteArea.style.fontSize = fontSize.value + 'px';
+    });
+
+    fontColor.addEventListener('input', () => {
+      noteArea.style.color = fontColor.value;
+    });
+
+    function downloadNote() {
+      const text = noteArea.value;
+      const blob = new Blob([text], { type: "text/plain" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "codex-notarum.txt";
+      link.click();
+    }
+  </script>
 
 </body>
 </html>
